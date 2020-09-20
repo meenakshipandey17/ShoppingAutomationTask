@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>shopping-automation-framework</module>
-        <module>shopping-automation-domain</module>
         <module>shopping-automation-pageObjects</module>
         <module>shopping-automation-tests</module>
     </modules>
