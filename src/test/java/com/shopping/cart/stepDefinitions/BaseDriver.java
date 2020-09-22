@@ -1,5 +1,6 @@
 package com.shopping.cart.stepDefinitions;
 
+import com.shopping.cart.util.Helper;
 import com.shopping.cart.util.ReadAppProperties;
 import cucumber.api.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,11 +14,14 @@ public class BaseDriver {
 	public static WebDriver driver;
 
 	public WebDriver setUpDriver() {
-		return getDriver();
+		if(driver == null) {
+			driver = getDriver();
+		}
+		return driver;
 	}
 
 	private WebDriver getDriver() {
-		if (getBrowser().equals("CHROME")) {
+		if (Helper.getBrowser().equals("CHROME")) {
 			ChromeDriverManager.chromedriver().setup();
 			driver =  new ChromeDriver();
 		} else {
@@ -35,10 +39,7 @@ public class BaseDriver {
 		driver.quit();
 	}
 
-	private String getBrowser() {
-		ReadAppProperties readAppProperties = new ReadAppProperties();
-		return readAppProperties.readKey("application.properties", "BROWSER");
-	}
+
 
 
 
