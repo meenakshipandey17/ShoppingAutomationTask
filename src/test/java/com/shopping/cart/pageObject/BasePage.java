@@ -1,7 +1,7 @@
 package com.shopping.cart.pageObject;
 
 import com.shopping.cart.util.WebdriverHelper;
-import com.shopping.cart.stepDefinitions.DriverFactory;
+import com.shopping.cart.stepDefinitions.BaseDriver;
 import com.shopping.cart.util.ReadAppProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +16,7 @@ public abstract class BasePage<T extends LoadableComponent<T>> extends LoadableC
 
 	BasePage(String pageUrl) {
 		this.pageUrl = pageUrl;
-		this.driver = new DriverFactory().setUpDriver();
+		this.driver = new BaseDriver().setUpDriver();
 		this.webdriverHelper = new WebdriverHelper(driver);
 		PageFactory.initElements(driver, this);
 	}
