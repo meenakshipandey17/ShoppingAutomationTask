@@ -1,0 +1,63 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 6,
+        "name": "SignIn with valid credentials",
+        "description": "",
+        "id": "test-cases-for-login-functionality;signin-with-valid-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 106325554,
+              "status": "passed"
+            },
+            "match": {
+              "location": "DriverFactory.closeDriver()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6391716783,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I am on signin page",
+            "match": {
+              "location": "SignInStepDef.user_is_on_signIn()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2006325298,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Sign in",
+            "match": {
+              "location": "SignInStepDef.signIn()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test cases for login functionality",
+    "description": "",
+    "id": "test-cases-for-login-functionality",
+    "keyword": "Feature",
+    "uri": "SignIn.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      }
+    ]
+  }
+]

@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/shopping.iml" filepath="$PROJECT_DIR$/shopping.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shopping-automation-framework/shopping-automation-framework.iml" filepath="$PROJECT_DIR$/shopping-automation-framework/shopping-automation-framework.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shopping-automation-pageObjects/shopping-automation-pageObjects.iml" filepath="$PROJECT_DIR$/shopping-automation-pageObjects/shopping-automation-pageObjects.iml" />
-      <module fileurl="file://$PROJECT_DIR$/shopping-automation-tests/shopping-automation-tests.iml" filepath="$PROJECT_DIR$/shopping-automation-tests/shopping-automation-tests.iml" />
     </modules>
   </component>
 </project>
