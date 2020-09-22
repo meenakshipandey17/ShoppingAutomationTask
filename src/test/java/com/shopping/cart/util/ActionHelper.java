@@ -49,6 +49,8 @@ public class ActionHelper {
 			wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 		} catch (WebDriverException e) {
 			return false;
+		}finally {
+			driver.close();
 		}
 		return true;
 	}
@@ -59,6 +61,8 @@ public class ActionHelper {
 			wait.until(ExpectedConditions.visibilityOf(element));
 		} catch (NoSuchElementException e) {
 			return false;
+		}finally {
+			driver.close();
 		}
 		return true;
 	}
