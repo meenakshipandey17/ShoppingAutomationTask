@@ -3,18 +3,18 @@
     "line": 3,
     "elements": [
       {
-        "line": 6,
-        "name": "SignIn with valid credentials",
+        "line": 5,
+        "name": "Buy summer dress",
         "description": "",
-        "id": "test-cases-for-login-functionality;signin-with-valid-credentials",
+        "id": "add-items-to-the-shopping-cart;buy-summer-dress",
         "after": [
           {
             "result": {
-              "duration": 106325554,
+              "duration": 140832213,
               "status": "passed"
             },
             "match": {
-              "location": "DriverFactory.closeDriver()"
+              "location": "BaseDriver.closeDriver()"
             }
           }
         ],
@@ -23,40 +23,64 @@
         "steps": [
           {
             "result": {
-              "duration": 6391716783,
+              "duration": 8870448307,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I am on signin page",
+            "line": 6,
+            "name": "user is not logged in",
             "match": {
-              "location": "SignInStepDef.user_is_on_signIn()"
+              "location": "ItemStepDef.userIsNotLoggedIn()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2006325298,
+              "duration": 19951129,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on selected dress page",
+            "match": {
+              "location": "ItemStepDef.userNavigateToSummerDressStorePage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2343762480,
               "status": "passed"
             },
             "line": 8,
-            "name": "Sign in",
+            "name": "add selected dress to cart",
             "match": {
-              "location": "SignInStepDef.signIn()"
+              "location": "ItemStepDef.addTheDressToCart()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12935666646,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "proceed to checkout and purchase the item",
+            "match": {
+              "location": "ItemStepDef.proceedToCheckout()"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "Test cases for login functionality",
+    "name": "Add items to the shopping cart",
     "description": "",
-    "id": "test-cases-for-login-functionality",
+    "id": "add-items-to-the-shopping-cart",
     "keyword": "Feature",
-    "uri": "SignIn.feature",
+    "uri": "AddToCart.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Login"
+        "name": "@AddToCart"
       }
     ]
   }
