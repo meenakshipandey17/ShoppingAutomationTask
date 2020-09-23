@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
         glue = "com.shopping.cart/stepDefinitions",
         monochrome = false,
         plugin = {"pretty", "html:target/cucumber-reports/cucumber-pretty",
-                "json:target/cucumber-html-reports/CucumberTestReport.json"}
+                "json:target/cucumber-reports/CucumberTestReport.json"}
 )
 
 public class RunCucumberTest {

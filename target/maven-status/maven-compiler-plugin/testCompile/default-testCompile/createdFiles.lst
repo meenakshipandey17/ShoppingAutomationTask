@@ -1,9 +1,0 @@
-com/shopping/cart/util/ReadAppProperties.class
-com/shopping/cart/runner/RunCucumberTest.class
-com/shopping/cart/pageObject/ItemPage.class
-com/shopping/cart/util/ActionHelper.class
-com/shopping/cart/util/Helper.class
-com/shopping/cart/stepDefinitions/ItemStepDef.class
-com/shopping/cart/stepDefinitions/BaseDriver.class
-com/shopping/cart/pageObject/BasePage.class
-com/shopping/cart/pageObject/CheckOutPage.class
