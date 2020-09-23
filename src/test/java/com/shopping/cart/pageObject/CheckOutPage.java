@@ -6,13 +6,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class CheckOutPage extends BasePage<CheckOutPage> {
 	@FindBy(css = "[href*='order&step=1']")
-	private WebElement proceedToStep2;
+	private WebElement proceedToSignIn;
 
 	@FindBy(css = "[name='processAddress']")
-	private WebElement proceedToStep4;
+	private WebElement proceedToAddressDetails;
 
 	@FindBy(css = "[name='processCarrier']")
-	private WebElement proceedToStep5;
+	private WebElement proceedToCarrierDetails;
 
 	@FindBy(className = "checker")
 	private WebElement termsOfServiceCheckobx;
@@ -39,16 +39,25 @@ public class CheckOutPage extends BasePage<CheckOutPage> {
 		super("index.php?controller=order");
 	}
 
-	public boolean purchase() {
-		getActions().click(proceedToStep2);
+	public void proceedToPurchase() {
+		getActions().click(proceedToSignIn);
+	}
+
+	public boolean isPurchaseComplete() {
+		return successMessage.getText().contains("is complete");
+	}
+
+	public void completesPaymentdetailAndPurchase() {
+		getActions().click(proceedToAddressDetails);
+		getActions().click(termsOfServiceCheckobx);
+		getActions().click(proceedToCarrierDetails);
+		getActions().click(payBankWire);
+		getActions().click(completeOrder);
+	}
+
+	public void signIn() {
 		getActions().inputText(emailField, Helper.getUserName());
 		getActions().inputText(passwordField, Helper.getPassword());
 		getActions().click(signInButton);
-		getActions().click(proceedToStep4);
-		getActions().click(termsOfServiceCheckobx);
-		getActions().click(proceedToStep5);
-		getActions().click(payBankWire);
-		getActions().click(completeOrder);
-		return successMessage.getText().contains("is complete");
 	}
 }

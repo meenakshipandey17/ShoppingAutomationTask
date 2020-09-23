@@ -10,6 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class ItemStepDef {
 
     ItemPage itemPage = new ItemPage().get();
+    CheckOutPage checkOutPage;
 
     private String SUMMER_DRESS_PAGE_TITLE = "Printed Summer Dress - My Store";
 
@@ -18,19 +19,33 @@ public class ItemStepDef {
        assertEquals(itemPage.getPageTitle(), SUMMER_DRESS_PAGE_TITLE);
     }
 
-    @And("^add selected dress to cart$")
+    @And("^add dress to cart$")
     public void addTheDressToCart() {
         itemPage.clickAddToCart();
     }
 
-    @And("^proceed to checkout and purchase the item$")
+    @And("^proceed to checkout$")
     public void proceedToCheckout() {
-        CheckOutPage checkOutPage = itemPage.clickCheckout();
-        checkOutPage.purchase();
+        checkOutPage =  itemPage.clickCheckout();
+        checkOutPage.proceedToPurchase();
     }
-
     @Given("^user is not logged in$")
     public void userIsNotLoggedIn() {
         itemPage.isSignInLinkDisplayed();
+    }
+
+    @And("^user is prompted to signIn$")
+    public void userIsPresentedWithSignInScreen() {
+        checkOutPage.signIn();
+    }
+
+    @And("^After signing in user proceeded with payment details$")
+    public void userSignedInAndPurchasedTheDress() {
+        checkOutPage.completesPaymentdetailAndPurchase();
+    }
+
+    @And("^user completes the purchase with success$")
+    public void userIsPresentedWithSuccessScreen() {
+        checkOutPage.isPurchaseComplete();
     }
 }

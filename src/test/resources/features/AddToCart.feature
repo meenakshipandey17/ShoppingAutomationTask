@@ -4,9 +4,12 @@ Feature: Add items to the shopping cart
 
   Scenario: Buy summer dress
     Given user is not logged in
-    And user is on selected dress page
-    Then add selected dress to cart
-    And proceed to checkout and purchase the item
+    When user is on selected dress page
+    Then add dress to cart
+    And proceed to checkout
+    And user is prompted to signIn
+    And After signing in user proceeded with payment details
+    And user completes the purchase with success
 
 
 

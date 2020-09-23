@@ -28,48 +28,84 @@ formatter.step({
 formatter.step({
   "line": 7,
   "name": "user is on selected dress page",
-  "keyword": "And "
+  "keyword": "When "
 });
 formatter.step({
   "line": 8,
-  "name": "add selected dress to cart",
+  "name": "add dress to cart",
   "keyword": "Then "
 });
 formatter.step({
   "line": 9,
-  "name": "proceed to checkout and purchase the item",
+  "name": "proceed to checkout",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 10,
+  "name": "user is prompted to signIn",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "After signing in user proceeded with payment details",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "user completes the purchase with success",
   "keyword": "And "
 });
 formatter.match({
   "location": "ItemStepDef.userIsNotLoggedIn()"
 });
 formatter.result({
-  "duration": 8870448307,
+  "duration": 11085281077,
   "status": "passed"
 });
 formatter.match({
   "location": "ItemStepDef.userNavigateToSummerDressStorePage()"
 });
 formatter.result({
-  "duration": 19951129,
+  "duration": 6000911,
   "status": "passed"
 });
 formatter.match({
   "location": "ItemStepDef.addTheDressToCart()"
 });
 formatter.result({
-  "duration": 2343762480,
+  "duration": 1221801412,
   "status": "passed"
 });
 formatter.match({
   "location": "ItemStepDef.proceedToCheckout()"
 });
 formatter.result({
-  "duration": 12935666646,
+  "duration": 3973245170,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ItemStepDef.userIsPresentedWithSignInScreen()"
+});
+formatter.result({
+  "duration": 3330675395,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ItemStepDef.userSignedInAndPurchasedTheDress()"
+});
+formatter.result({
+  "duration": 9300642029,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ItemStepDef.userIsPresentedWithSuccessScreen()"
+});
+formatter.result({
+  "duration": 51912137,
   "status": "passed"
 });
 formatter.after({
-  "duration": 140832213,
+  "duration": 165935701,
   "status": "passed"
 });
 });

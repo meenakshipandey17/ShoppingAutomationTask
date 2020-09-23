@@ -2,14 +2,11 @@ package com.shopping.cart.util;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.function.Function;
 
 
 public class ActionHelper {
@@ -66,48 +63,5 @@ public class ActionHelper {
 		}
 		return true;
 	}
-
-	private boolean isElementNotDisplayed(WebElement element, Integer timeout) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeout);
-			wait.until(ExpectedConditions.invisibilityOf(element));
-		} catch (TimeoutException e) {
-			return false;
-		}
-		return true;
-	}
-
-	private boolean isTextChanged(WebElement element, String originalText, Integer timeout) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeout);
-			wait.until(new Function<WebDriver, Boolean>() {
-				String initialText = originalText;
-
-				public Boolean apply(WebDriver driver) {
-					return !element.getText().equals(initialText);
-				}
-			});
-		} catch (WebDriverException e) {
-			return false;
-		}
-		return true;
-	}
-
-	private boolean isElementTextChanged(WebElement element, String originalText, Integer timeout) {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, timeout);
-			wait.until(new Function<WebDriver, Boolean>() {
-				String initialText = originalText;
-
-				public Boolean apply(WebDriver driver) {
-					return !element.getText().equals(initialText);
-				}
-			});
-		} catch (WebDriverException e) {
-			return false;
-		}
-		return true;
-	}
-
 
 }

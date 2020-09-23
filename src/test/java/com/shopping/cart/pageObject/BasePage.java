@@ -1,8 +1,8 @@
 package com.shopping.cart.pageObject;
 
-import com.shopping.cart.util.Helper;
-import com.shopping.cart.util.ActionHelper;
 import com.shopping.cart.stepDefinitions.BaseDriver;
+import com.shopping.cart.util.ActionHelper;
+import com.shopping.cart.util.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
@@ -30,15 +30,18 @@ public abstract class BasePage<T extends LoadableComponent<T>> extends LoadableC
 		if (pageUrl.contains("http")) {
 			driver.get(pageUrl);
 		} else {
-			driver.get(Helper.getAppUrl() + pageUrl);
+			driver.get(Helper.getAppBase() + pageUrl);
 		}
 	}
 
 	@Override
 	protected void isLoaded() throws Error {
-		if (!this.driver.getCurrentUrl().contains(pageUrl) && getActions().isPageReady()) {
-			throw new Error(actionHelper.getCurrentUrl() + " is not loading");
-		}
+	    try {
+            if (!this.driver.getCurrentUrl().contains(pageUrl) && getActions().isPageReady()) {
+                throw new Error(actionHelper.getCurrentUrl() + " is not loading");
+            }
+        }catch (Exception e){
+        }
 	}
 
 	 public String getPageTitle(){

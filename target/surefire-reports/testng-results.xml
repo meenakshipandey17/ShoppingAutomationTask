@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="com.shopping.cart.runner.RunCucumberTest" duration-ms="24701" started-at="2020-09-23T01:10:36 BST" finished-at="2020-09-23T01:11:00 BST">
+  <suite name="Surefire suite" duration-ms="29585" started-at="2020-09-23T11:33:10 BST" finished-at="2020-09-23T11:33:40 BST">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="24701" started-at="2020-09-23T01:10:36 BST" finished-at="2020-09-23T01:11:00 BST">
-      <class name="com.shopping.cart.runner.RunCucumberTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.shopping.cart.runner.RunCucumberTest@6ddf90b0]" name="setUpClass" is-config="true" duration-ms="230" started-at="2020-09-23T01:10:36 BST" finished-at="2020-09-23T01:10:36 BST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.shopping.cart.runner.RunCucumberTest@6ddf90b0]" name="feature" duration-ms="24352" started-at="2020-09-23T01:10:36 BST" description="Runs Cucumber Feature Files" data-provider="features" finished-at="2020-09-23T01:11:00 BST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Add items to the shopping cart]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.shopping.cart.runner.RunCucumberTest@6ddf90b0]" name="tearDownClass" is-config="true" duration-ms="14" started-at="2020-09-23T01:11:00 BST" finished-at="2020-09-23T01:11:00 BST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.shopping.cart.runner.RunCucumberTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- com.shopping.cart.runner.RunCucumberTest -->
+    <test name="Surefire test" duration-ms="29585" started-at="2020-09-23T11:33:10 BST" finished-at="2020-09-23T11:33:40 BST">
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
